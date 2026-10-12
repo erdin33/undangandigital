@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Wedding of Randi &amp; </title>
+  <meta name="description"
+    content="Undangan pernikahan Randi & Revi, Sabtu 20 Desember 2026. Mohon doa restu dan konfirmasi kehadiran Anda.">
+  <meta name="theme-color" content="#4A2B18">
+  <meta property="og:title" content="The Wedding of Randi & Revi">
+  <meta property="og:description" content="Sabtu, 20 Desember 2026">
+  <meta property="og:image" content="foto/cover.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="locked">
+
+  <!-- Simbol SVG yang dipakai berulang -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="fl" viewBox="-50 -50 100 100">
+        <g fill="currentColor">
+          <ellipse rx="15" ry="26" cy="-22" />
+          <ellipse rx="15" ry="26" cy="-22" transform="rotate(72)" />
+          <ellipse rx="15" ry="26" cy="-22" transform="rotate(144)" />
+          <ellipse rx="15" ry="26" cy="-22" transform="rotate(216)" />
+          <ellipse rx="15" ry="26" cy="-22" transform="rotate(288)" />
+        </g>
+        <g fill="#fff" fill-opacity=".5">
+          <ellipse rx="8" ry="14" cy="-12" transform="rotate(36)" />
+          <ellipse rx="8" ry="14" cy="-12" transform="rotate(108)" />
+          <ellipse rx="8" ry="14" cy="-12" transform="rotate(180)" />
+          <ellipse rx="8" ry="14" cy="-12" transform="rotate(252)" />
+          <ellipse rx="8" ry="14" cy="-12" transform="rotate(324)" />
+        </g>
+        <circle r="8" fill="#D9C27A" />
+        <circle r="3" fill="#B59A4E" />
+      </symbol>
+      <symbol id="lf" viewBox="0 0 20 40">
+        <path d="M10 0C23 14 23 30 10 40 -3 30 -3 14 10 0Z" fill="currentColor" />
+      </symbol>
+      <symbol id="joglo" viewBox="0 0 400 160">
+        <g fill="currentColor">
+          <path d="M200 8 L262 52 H138Z" />
+          <path d="M120 60 L200 40 L280 60 L330 100 H70Z" />
+          <rect x="92" y="100" width="216" height="8" />
+          <rect x="104" y="108" width="12" height="52" />
+          <rect x="188" y="108" width="24" height="52" />
+          <rect x="284" y="108" width="12" height="52" />
+        </g>
+      </symbol>
+      <symbol id="ornamen" viewBox="0 0 160 20">
+        <path d="M0 10h62M98 10h62" stroke="currentColor" fill="none" />
+        <path d="M80 0l10 10-10 10-10-10z" fill="#D9C27A" />
+        <circle cx="66" cy="10" r="2.5" fill="currentColor" />
+        <circle cx="94" cy="10" r="2.5" fill="currentColor" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ SAMPUL (layar pertama sebelum dibuka) ============ -->
+  <div id="cover" class="cover">
+    <div class="cover-bg" role="img" aria-label="Foto Revi dan Randi"></div>
+    <div class="petals" aria-hidden="true"></div>
+    <div class="cover-inner">
+      <p class="eyebrow">The Wedding of</p>
+      <div class="monogram" aria-hidden="true">
+        <svg class="ring" viewBox="-150 -150 300 300"></svg>
+        <span>R</span><i>&amp;</i><span>S</span>
+      </div>
+      <h1 class="script">Randi &amp; Revi</h1>
+      <p class="cover-date">Sabtu, 20 Desember 2026</p>
+      <div class="guest">
+        <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+        <b id="guestName">Tamu Undangan</b>
+        <small>*Mohon maaf apabila ada kesalahan penulisan nama/gelar</small>
+      </div>
+      <button class="btn btn-light" id="open" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 7h18v12H3zM3 8l9 6 9-6" />
+        </svg>
+        Buka Undangan
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ PANEL KIRI (hanya tampil di laptop/PC) ============ -->
+  <aside class="side" aria-hidden="true">
+    <div class="side-inner">
+      <p class="eyebrow">The Wedding of</p>
+      <p class="script side-name">Randi &amp; Revi</p>
+      <p>Sabtu, 20 Desember 2026</p>
+    </div>
+  </aside>
+
+  <main id="main">
+
+    <!-- BERANDA -->
+    <section class="sec hero fl" id="beranda" data-nav="beranda">
+      <p class="eyebrow" data-anim="up">Undangan Pernikahan</p>
+      <div class="arch-photo" data-anim="zoom">
+        <img src="foto/cover.jpeg" alt="Randi dan Revi" width="896" height="1200">
+      </div>
+      <h2 class="script big" data-anim="up">Randi &amp; Revi</h2>
+      <p class="date-line" data-anim="up">Sabtu &bull; 20 &bull; 12 &bull; 2026</p>
+      <svg class="joglo" viewBox="0 0 400 160" aria-hidden="true">
+        <use href="#joglo" />
+      </svg>
+    </section>
+
+    <!-- KUTIPAN -->
+    <section class="sec dark" id="kutipan" data-nav="beranda">
+      <div class="monogram sm" data-anim="zoom" aria-hidden="true"><span>R</span><i>&amp;</i><span>S</span></div>
+      <blockquote data-anim="up">
+        <p>"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu
+          sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
+          sayang."</p>
+        <cite>Q.S. Ar-Rum : 21</cite>
+      </blockquote>
+    </section>
+
+    <!-- MEMPELAI -->
+    <section class="sec fl" id="mempelai" data-nav="mempelai">
+      <p class="salam" data-anim="up">Assalamu'alaikum Wr. Wb.</p>
+      <p class="intro" data-anim="up">Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, kami bermaksud
+        mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan putra-putri kami.</p>
+
+      <article class="person" data-anim="left">
+        <div class="person-photo"><img src="foto/pria.jpeg" alt="Randi Pratama" loading="lazy" width="896"
+            height="1200">
+        </div>
+        <p class="role">The Groom</p>
+        <h3 class="script">Randi</h3>
+        <p class="parents">Putra pertama dari<br><b>Bapak Hartono &amp; Ibu Wulandari</b></p>
+        <a class="btn btn-sm" href="https://instagram.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r=".6" />
+          </svg>Instagram</a>
+      </article>
+
+      <div class="amp" data-anim="zoom" aria-hidden="true">&amp;</div>
+
+      <article class="person" data-anim="right">
+        <div class="person-photo"><img src="foto/wanita.jpeg" alt="Revi" loading="lazy" width="896" height="1200"></div>
+        <p class="role">The Bride</p>
+        <h3 class="script">Revi</h3>
+        <p class="parents">Putri kedua dari<br><b>Bapak Raharja &amp; Ibu Tursini</b></p>
+        <a class="btn btn-sm" href="https://instagram.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r=".6" />
+          </svg>Instagram</a>
+      </article>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="sec countdown" id="countdown" data-nav="acara">
+      <h2 class="title light" data-anim="up">Menuju Hari Bahagia</h2>
+      <div id="count" class="count" data-anim="zoom" aria-label="Hitung mundur menuju acara">
+        <div><strong>00</strong><span>Hari</span></div>
+        <div><strong>00</strong><span>Jam</span></div>
+        <div><strong>00</strong><span>Menit</span></div>
+        <div><strong>00</strong><span>Detik</span></div>
+      </div>
+      <a class="btn btn-light btn-sm" id="cal" href="#" target="_blank" rel="noopener" data-anim="up">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16v15H4zM4 10.5h16M8.5 3v5M15.5 3v5" />
+        </svg>Save The Date</a>
+    </section>
+
+    <!-- ACARA -->
+    <section class="sec fl" id="acara" data-nav="acara">
+      <h2 class="title" data-anim="up">Rangkaian Acara</h2>
+
+      <article class="event" data-anim="left">
+        <h3 class="script">Akad Nikah</h3>
+        <div class="event-date">
+          <span>Sabtu</span><strong>20</strong><span>Desember<br>2026</span>
+        </div>
+        <p class="event-time">Pukul 09.00 WIB – Selesai</p>
+        <p class="event-place"><b>Kediaman Mempelai Wanita</b><br>Jl. Contoh No. 12, Jakarta</p>
+        <a class="btn btn-sm" href="https://maps.google.com/?q=Jl.+Contoh+No.+12+Jakarta" target="_blank"
+          rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" />
+            <circle cx="12" cy="9.5" r="2.5" />
+          </svg>Google Maps</a>
+      </article>
+
+      <article class="event" data-anim="right">
+        <h3 class="script">Resepsi</h3>
+        <div class="event-date">
+          <span>Sabtu</span><strong>20</strong><span>Desember<br>2026</span>
+        </div>
+        <p class="event-time">Pukul 12.00 – 14.00 WIB</p>
+        <p class="event-place"><b>Kediaman Mempelai Wanita</b><br>Jl. Contoh No. 12, Jakarta</p>
+        <a class="btn btn-sm" href="https://maps.google.com/?q=Jl.+Contoh+No.+12+Jakarta" target="_blank"
+          rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" />
+            <circle cx="12" cy="9.5" r="2.5" />
+          </svg>Google Maps</a>
+      </article>
+    </section>
+
+    <!-- GALERI -->
+    <section class="sec dark" id="galeri" data-nav="galeri">
+      <h2 class="title light" data-anim="up">Our Gallery</h2>
+      <p class="intro light" data-anim="up">Kami bersyukur dipertemukan Allah di waktu terbaik. Kini kami menanti hari
+        istimewa kami.</p>
+      <div class="gallery">
+        <!-- Ganti / tambah foto di sini -->
+        <button type="button" class="g-item tall" data-anim="zoom"><img src="foto/galeri3.jpeg"
+            alt="Foto prewedding di candi" loading="lazy"></button>
+        <button type="button" class="g-item" data-anim="zoom"><img src="foto/galeri2.jpeg" alt="Cincin pernikahan"
+            loading="lazy"></button>
+        <button type="button" class="g-item" data-anim="zoom"><img src="foto/pria.jpeg" alt="Randi"
+            loading="lazy"></button>
+        <button type="button" class="g-item wide" data-anim="zoom"><img src="foto/galeri1.jpeg"
+            alt="Foto prewedding di sawah" loading="lazy"></button>
+        <button type="button" class="g-item" data-anim="zoom"><img src="foto/wanita.jpeg" alt="Revi"
+            loading="lazy"></button>
+        <button type="button" class="g-item" data-anim="zoom"><img src="foto/cover.jpeg" alt="Randi dan Revi"
+            loading="lazy"></button>
+      </div>
+    </section>
+
+    <!-- WEDDING GIFT -->
+    <section class="sec fl" id="gift" data-nav="ucapan">
+      <h2 class="title" data-anim="up">Wedding Gift</h2>
+      <p class="intro" data-anim="up">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi
+        adalah ungkapan tanda kasih, Anda dapat memberi kado secara cashless.</p>
+      <div class="tabs" role="tablist" data-anim="up">
+        <button type="button" role="tab" class="tab act" aria-selected="true" data-tab="amplop">Amplop Digital</button>
+        <button type="button" role="tab" class="tab" aria-selected="false" data-tab="kado">Kirim Kado</button>
+      </div>
+      <div class="tab-panel" id="amplop" role="tabpanel">
+        <div class="bank-card" data-anim="flip">
+          <div class="bank-top"><b>BCA</b><span class="chip" aria-hidden="true"></span></div>
+          <p class="bank-no">1234 5678 90</p>
+          <p class="bank-name">a.n. Randi Pratama</p>
+          <button type="button" class="btn btn-sm btn-light" data-copy="1234567890">Salin No. Rekening</button>
+        </div>
+        <div class="bank-card alt" data-anim="flip">
+          <div class="bank-top"><b>Mandiri</b><span class="chip" aria-hidden="true"></span></div>
+          <p class="bank-no">0987 6543 21</p>
+          <p class="bank-name">a.n. Revi</p>
+          <button type="button" class="btn btn-sm btn-light" data-copy="0987654321">Salin No. Rekening</button>
+        </div>
+      </div>
+      <div class="tab-panel hide" id="kado" role="tabpanel">
+        <div class="gift-addr">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M3 9h18v4H3zM5 13h14v8H5zM12 9v12M12 9C10 4 6 5 7.5 7.5 8.5 9 12 9 12 9zm0 0c2-5 6-4 4.5-1.5C15.5 9 12 9 12 9z" />
+          </svg>
+          <p><b>Randi Pratama</b><br>Jl. Contoh No. 12, Kel. Contoh, Kec. Contoh, Jakarta 12345</p>
+          <button type="button" class="btn btn-sm"
+            data-copy="Randi Pratama, Jl. Contoh No. 12, Kel. Contoh, Kec. Contoh, Jakarta 12345">Salin
+            Alamat</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP + UCAPAN -->
+    <section class="sec" id="ucapan" data-nav="ucapan">
+      <h2 class="title" data-anim="up">Ucapan &amp; Doa</h2>
+      <p class="intro" data-anim="up">Tuliskan harapan dan doa terbaik Anda untuk kedua mempelai, sekaligus konfirmasi
+        kehadiran.</p>
+      <form id="form" class="form" data-anim="zoom">
+        <label for="nama">Nama</label>
+        <input id="nama" name="nama" required maxlength="80" autocomplete="name" placeholder="Nama Anda">
+        <label for="ucapanText">Ucapan dan doa</label>
+        <textarea id="ucapanText" name="ucapan" rows="3" maxlength="300" placeholder="Tulis ucapan..."></textarea>
+        <span class="label" id="lblHadir">Konfirmasi kehadiran</span>
+        <div class="opts" role="radiogroup" aria-labelledby="lblHadir">
+          <label><input type="radio" name="status" value="Hadir" required>Hadir</label>
+          <label><input type="radio" name="status" value="Tidak hadir">Tidak hadir</label>
+        </div>
+        <div id="jumlahWrap">
+          <label for="jumlah">Jumlah tamu</label>
+          <select id="jumlah" name="jumlah"></select>
+        </div>
+        <button class="btn" id="send" type="submit">Kirim</button>
+        <p id="msg" role="status"></p>
+      </form>
+      <div class="wishes-box" data-anim="up">
+        <p class="wish-count"><b id="wishCount">0</b> Ucapan</p>
+        <div id="wishes">
+          <p class="empty">Belum ada ucapan. Jadilah yang pertama.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PENUTUP -->
+    <footer class="sec closing" id="penutup">
+      <div class="closing-photo" data-anim="zoom"><img src="foto/galeri1.jpeg" alt="" loading="lazy"></div>
+      <p data-anim="up">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir
+        dan memberikan doa restu.</p>
+      <p class="salam light" data-anim="up">Wassalamu'alaikum Wr. Wb.</p>
+      <h2 class="title light" data-anim="up">Terima Kasih</h2>
+      <p class="script big light" data-anim="zoom">Randi &amp; Revi</p>
+      <svg class="orn" viewBox="0 0 160 20" aria-hidden="true">
+        <use href="#ornamen" />
+      </svg>
+    </footer>
+  </main>
+
+  <!-- Navigasi bawah -->
+  <nav id="nav" aria-label="Navigasi undangan">
+    <a href="#beranda" data-go="beranda"><svg viewBox="0 0 24 24">
+        <path d="M3 11l9-8 9 8M5 9.5V21h5v-6h4v6h5V9.5" />
+      </svg><span>Beranda</span></a>
+    <a href="#mempelai" data-go="mempelai"><svg viewBox="0 0 24 24">
+        <path d="M12 20s-7.5-4.8-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.2 12 20 12 20z" />
+      </svg><span>Mempelai</span></a>
+    <a href="#countdown" data-go="acara"><svg viewBox="0 0 24 24">
+        <path d="M4 6h16v15H4zM4 10.5h16M8.5 3v5M15.5 3v5" />
+      </svg><span>Acara</span></a>
+    <a href="#galeri" data-go="galeri"><svg viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <circle cx="9" cy="10" r="2" />
+        <path d="M21 16l-5-5-9 9" />
+      </svg><span>Galeri</span></a>
+    <a href="#gift" data-go="ucapan"><svg viewBox="0 0 24 24">
+        <path d="M4 5h16v11H10l-6 4.5z" />
+      </svg><span>Ucapan</span></a>
+  </nav>
+
+  <!-- Lightbox galeri -->
+  <div id="lb" class="lb hide" role="dialog" aria-modal="true" aria-label="Foto galeri">
+    <button type="button" class="lb-close" aria-label="Tutup">&times;</button>
+    <button type="button" class="lb-prev" aria-label="Sebelumnya">&#8249;</button>
+    <img id="lbImg" alt="">
+    <button type="button" class="lb-next" aria-label="Berikutnya">&#8250;</button>
+  </div>
+
+  <!-- Tirai transisi antar halaman -->
+  <div id="veil" aria-hidden="true"><i></i><i></i><svg viewBox="-50 -50 100 100">
+      <use href="#fl" x="-50" y="-50" width="100" height="100" />
+    </svg></div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <button id="music" class="hide" type="button" aria-label="Putar atau jeda musik" title="Musik">♪</button>
+  <audio id="bgm" loop preload="none"></audio>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

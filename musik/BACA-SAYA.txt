@@ -1,0 +1,7 @@
+Taruh file lagu di folder ini dengan nama:  lagu.mp3
+
+Tips:
+- Format MP3, ukuran ideal di bawah 5 MB agar cepat dimuat di HP.
+- Musik otomatis diputar saat tamu menekan "Buka undangan".
+- Ingin pakai link? Ubah CONFIG.musik di undangan-adat.html menjadi link langsung ke file .mp3
+  (bukan link YouTube/Spotify, karena tidak bisa diputar langsung).
