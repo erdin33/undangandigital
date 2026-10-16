@@ -209,7 +209,7 @@ h3 {
 .cover-bg {
   position: absolute;
   inset: 0;
-  background: url("../foto/cover.jpeg") center 30%/cover;
+  background: url("../foto/depan.jpeg") center 30%/cover;
   animation: kenburns 22s ease-in-out infinite alternate
 }
 
@@ -559,7 +559,7 @@ blockquote cite {
 /* Countdown */
 .countdown {
   color: #fff;
-  background: linear-gradient(rgba(61, 35, 20, .72), rgba(61, 35, 20, .82)), url("../foto/galeri1.jpeg") center/cover
+  background: linear-gradient(rgba(61, 35, 20, .72), rgba(61, 35, 20, .82)), url("../foto/depan.jpeg") center/cover
 }
 
 .count {

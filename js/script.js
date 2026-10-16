@@ -1,10 +1,10 @@
 /* ===== UBAH BAGIAN INI ===== */
 const CONFIG = {
-  scriptUrl: "GANTI_DENGAN_URL_WEB_APP_APPS_SCRIPT",  // URL Web App Google Apps Script (berakhiran /exec)
-  tanggalAcara: "2026-12-20T09:00:00+07:00",          // mulai acara (untuk hitung mundur)
+  scriptUrl: "https://script.google.com/macros/s/AKfycbxqxG2SZcPY5htVnpCG5Fj_0g2Xs8mlJBnaM4EiYKvEWT8dsfb0OsoTjLynHrrXgBaJQQ/exec",  // URL Web App Google Apps Script (berakhiran /exec)
+  tanggalAcara: "2026-11-22T08:00:00+07:00",          // mulai acara (untuk hitung mundur)
   durasiJam: 5,                                       // untuk Save The Date
-  judulKalender: "Pernikahan Raka & Sinta",
-  lokasi: "Jl. Contoh No. 12, Jakarta",
+  judulKalender: "Pernikahan Randi & Revi",
+  lokasi: "Kp.Ciseureh RT/RW 002/004",
   maksTamu: 4,
   musik: "musik/lagu.mp3"   // file mp3 di folder musik/, atau link langsung ke file .mp3
 };
@@ -69,7 +69,7 @@ const bgm = $("bgm"), mb = $("music");
 const setPlay = on => mb.classList.toggle("on", on);
 function playMusic() {
   if (!CONFIG.musik || !bgm.paused) return;
-  bgm.play().then(() => { setPlay(true); mb.classList.remove("hide"); }).catch(() => {});
+  bgm.play().then(() => { setPlay(true); mb.classList.remove("hide"); }).catch(() => { });
 }
 if (CONFIG.musik) {
   bgm.src = CONFIG.musik;
@@ -214,7 +214,7 @@ function renderWishes(list) {
 }
 async function loadWishes() {
   if (CONFIG.scriptUrl.startsWith("GANTI")) return;
-  try { renderWishes(await (await fetch(CONFIG.scriptUrl)).json()); } catch (e) {}
+  try { renderWishes(await (await fetch(CONFIG.scriptUrl)).json()); } catch (e) { }
 }
 loadWishes();
 
@@ -224,12 +224,16 @@ $("form").addEventListener("submit", async e => {
   const msg = $("msg"), btn = $("send");
   if (CONFIG.scriptUrl.startsWith("GANTI")) { msg.textContent = "URL Apps Script belum diisi di js/script.js"; return; }
   const f = new FormData(e.target), hadir = f.get("status") === "Hadir";
-  const data = { nama: f.get("nama").trim(), status: f.get("status"),
-    jumlah: hadir ? Number(f.get("jumlah")) : 0, ucapan: f.get("ucapan").trim() };
+  const data = {
+    nama: f.get("nama").trim(), status: f.get("status"),
+    jumlah: hadir ? Number(f.get("jumlah")) : 0, ucapan: f.get("ucapan").trim()
+  };
   btn.disabled = true; msg.textContent = "Mengirim...";
   try {
-    await fetch(CONFIG.scriptUrl, { method: "POST", mode: "no-cors",
-      headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(data) });
+    await fetch(CONFIG.scriptUrl, {
+      method: "POST", mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(data)
+    });
     msg.textContent = "Terima kasih, konfirmasi Anda sudah terkirim.";
     if (data.ucapan) {   // tampilkan langsung tanpa menunggu spreadsheet
       if (!$("wishes").querySelector(".wish")) $("wishes").textContent = "";
